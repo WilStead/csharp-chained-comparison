@@ -23,3 +23,6 @@ var result = (ChainComparator)boxedS < 2;
 NuGet package coming soon...
 
 For now just download, build, and include the .dll.
+
+## Credit
+Thanks to [Robbie Vanbrabant](https://github.com/robbiev) who was responsible for the original work from which this project was forked.
