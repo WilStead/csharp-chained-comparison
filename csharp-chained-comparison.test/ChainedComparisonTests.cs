@@ -16,7 +16,11 @@ namespace Chain.test
 
             Assert.IsTrue((ChainComparator)(short)1 < (short)2 < (short)3);
 
-            Assert.IsTrue((ChainComparator)(decimal)1 <= (decimal)1 == (decimal)1 != (decimal)5);
+            short s = 1;
+            int boxedS = s;
+            Assert.IsTrue((ChainComparator)boxedS < 2);
+
+            Assert.IsTrue((ChainComparator)(decimal)1.1 <= (decimal)1.1 == (decimal)1.1 != (decimal)5.4);
 
             Assert.IsTrue((ChainComparator)'a' < 'b' < 'c');
             Assert.IsFalse((ChainComparator)'z' < 'b' < 'c');

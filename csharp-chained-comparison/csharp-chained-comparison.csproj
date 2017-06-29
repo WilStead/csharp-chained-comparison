@@ -2,10 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.0</TargetFramework>
-    <RootNamespace>Chain</RootNamespace>
+    <PackageId>csharp-chained-comparison</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>Wil Stead, Robbie Vanbrabant</Authors>
     <Description>Chaining comparison operations with C#, like x &lt; y &lt; z</Description>
+    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/WilStead/csharp-chained-comparison</PackageProjectUrl>
     <RepositoryUrl>https://github.com/WilStead/csharp-chained-comparison</RepositoryUrl>
+    <PackageLicenseUrl>https://github.com/WilStead/csharp-chained-comparison/blob/master/LICENSE.txt</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageTags>csharp</PackageTags>
+    <RootNamespace>Chain</RootNamespace>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

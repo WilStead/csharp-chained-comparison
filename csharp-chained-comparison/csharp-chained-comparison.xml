@@ -1,0 +1,411 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>csharp-chained-comparison</name>
+    </assembly>
+    <members>
+        <member name="T:Chain.ChainBool">
+            <summary>
+            Implements chained comparisons in C# (e.g. "x &lt; y &lt; z"). This struct is not meant to be
+            instantiated directly in your code. Instances are generated automatically when you use
+            chained comparisons.
+            </summary>
+        </member>
+        <member name="P:Chain.ChainBool.Value">
+            <summary>
+            The current <see cref="T:System.Boolean"/> value of the <see cref="T:Chain.ChainBool"/>.
+            </summary>
+        </member>
+        <member name="P:Chain.ChainBool.Left">
+            <summary>
+            The value on the left-hand side of the operation.
+            </summary>
+        </member>
+        <member name="M:Chain.ChainBool.#ctor(System.Boolean,System.IComparable)">
+            <summary>
+            Instantiates a new instance of <see cref="T:Chain.ChainBool"/>. You are not meant to call this
+            directly. Instances are generated automatically when you perform chained comparisons.
+            </summary>
+            <param name="boolValue">The <see cref="T:System.Boolean"/> value of this instance.</param>
+            <param name="left">The value on the left-hand side of the operation.</param>
+        </member>
+        <member name="M:Chain.ChainBool.op_Implicit(Chain.ChainBool)~System.Boolean">
+            <summary>
+            Implicit conversion between <see cref="T:Chain.ChainBool"/> and <see cref="T:System.Boolean"/>.
+            </summary>
+        </member>
+        <member name="M:Chain.ChainBool.op_LessThan(Chain.ChainBool,Chain.ChainComparator)">
+            <summary>
+            Less-than comparison between a <see cref="T:Chain.ChainBool"/> operand on the left-hand side, and
+            a <see cref="T:Chain.ChainComparator"/> on the right-hand side.
+            </summary>
+            <param name="resultSoFar">
+            A <see cref="T:Chain.ChainBool"/> representing the reseults of the chain comparison so far.
+            </param>
+            <param name="i">A <see cref="T:Chain.ChainComparator"/> representing the rest of the operation.</param>
+            <returns>
+            true if <paramref name="resultSoFar"/> has a value less than <paramref name="i"/>;
+            otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Chain.ChainBool.op_LessThanOrEqual(Chain.ChainBool,Chain.ChainComparator)">
+            <summary>
+            Less-than-or-equal comparison between a <see cref="T:Chain.ChainBool"/> operand on the left-hand
+            side, and a <see cref="T:Chain.ChainComparator"/> on the right-hand side.
+            </summary>
+            <param name="resultSoFar">
+            A <see cref="T:Chain.ChainBool"/> representing the reseults of the chain comparison so far.
+            </param>
+            <param name="i">A <see cref="T:Chain.ChainComparator"/> representing the rest of the operation.</param>
+            <returns>
+            true if <paramref name="resultSoFar"/> has a value less than or equal to <paramref
+            name="i"/>; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Chain.ChainBool.op_GreaterThan(Chain.ChainBool,Chain.ChainComparator)">
+            <summary>
+            Greater-than comparison between a <see cref="T:Chain.ChainBool"/> operand on the left-hand side,
+            and a <see cref="T:Chain.ChainComparator"/> on the right-hand side.
+            </summary>
+            <param name="resultSoFar">
+            A <see cref="T:Chain.ChainBool"/> representing the reseults of the chain comparison so far.
+            </param>
+            <param name="i">A <see cref="T:Chain.ChainComparator"/> representing the rest of the operation.</param>
+            <returns>
+            true if <paramref name="resultSoFar"/> has a value greater than <paramref name="i"/>;
+            otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Chain.ChainBool.op_GreaterThanOrEqual(Chain.ChainBool,Chain.ChainComparator)">
+            <summary>
+            Greater-than-or-equal comparison between a <see cref="T:Chain.ChainBool"/> operand on the
+            left-hand side, and a <see cref="T:Chain.ChainComparator"/> on the right-hand side.
+            </summary>
+            <param name="resultSoFar">
+            A <see cref="T:Chain.ChainBool"/> representing the reseults of the chain comparison so far.
+            </param>
+            <param name="i">A <see cref="T:Chain.ChainComparator"/> representing the rest of the operation.</param>
+            <returns>
+            true if <paramref name="resultSoFar"/> has a value greater than or equal to <paramref
+            name="i"/>; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Chain.ChainBool.Equals(System.Object)">
+            <summary>
+            Returns a value indicating whether this instance is equal to a specified object.
+            </summary>
+            <param name="obj">A value to compare to this instance.</param>
+            <returns>
+            true if <paramref name="obj"/> is a <see cref="T:System.Boolean"/> and has the same value as this
+            instance; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Chain.ChainBool.op_Equality(Chain.ChainBool,Chain.ChainComparator)">
+            <summary>
+            Equality comparison between a <see cref="T:Chain.ChainBool"/> operand on the left-hand side, and
+            a <see cref="T:Chain.ChainComparator"/> on the right-hand side.
+            </summary>
+            <param name="resultSoFar">
+            A <see cref="T:Chain.ChainBool"/> representing the reseults of the chain comparison so far.
+            </param>
+            <param name="i">A <see cref="T:Chain.ChainComparator"/> representing the rest of the operation.</param>
+            <returns>
+            true if <paramref name="resultSoFar"/> is equal to <paramref name="i"/>; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Chain.ChainBool.op_Inequality(Chain.ChainBool,Chain.ChainComparator)">
+            <summary>
+            Inequality comparison between a <see cref="T:Chain.ChainBool"/> operand on the left-hand side,
+            and a <see cref="T:Chain.ChainComparator"/> on the right-hand side.
+            </summary>
+            <param name="resultSoFar">
+            A <see cref="T:Chain.ChainBool"/> representing the reseults of the chain comparison so far.
+            </param>
+            <param name="i">A <see cref="T:Chain.ChainComparator"/> representing the rest of the operation.</param>
+            <returns>
+            true if <paramref name="resultSoFar"/> is unequal to <paramref name="i"/>; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Chain.ChainBool.op_LogicalNot(Chain.ChainBool)">
+            <summary>
+            Negation unary operation of a <see cref="T:Chain.ChainBool"/> operand.
+            </summary>
+            <param name="resultSoFar">A <see cref="T:Chain.ChainBool"/> to be negated.</param>
+            <returns>
+            A <see cref="T:Chain.ChainBool"/> whose <see cref="P:Chain.ChainBool.Value"/> has the opposite true/false value of
+            <paramref name="resultSoFar"/>.
+            </returns>
+        </member>
+        <member name="M:Chain.ChainBool.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>A hash code for the current <see cref="T:Chain.ChainBool"/>.</returns>
+        </member>
+        <member name="M:Chain.ChainBool.ToString">
+            <summary>
+            Converts the value of this instance to its equivalent string representation, based on its
+            <see cref="P:Chain.ChainBool.Value"/> (either "True" or "False").
+            </summary>
+            <returns>
+            <see cref="F:System.Boolean.TrueString"/> if <see cref="P:Chain.ChainBool.Value"/> is true, or <see
+            cref="F:System.Boolean.FalseString"/> if <see cref="P:Chain.ChainBool.Value"/> is false.
+            </returns>
+        </member>
+        <member name="T:Chain.ChainComparator">
+            <summary>
+            Implements chained comparisons in C# (e.g. "x &lt; y &lt; z"). This struct is not meant to be
+            instantiated directly in your code. Instances are generated automatically when you use
+            chained comparisons.
+            </summary>
+        </member>
+        <member name="P:Chain.ChainComparator.Value">
+            <summary>
+            The current value of the <see cref="T:Chain.ChainComparator"/>.
+            </summary>
+        </member>
+        <member name="M:Chain.ChainComparator.op_Implicit(System.Byte)~Chain.ChainComparator">
+            <summary>
+            Implicit conversion between <see cref="T:System.Byte"/> and <see cref="T:Chain.ChainComparator"/>.
+            </summary>
+        </member>
+        <member name="M:Chain.ChainComparator.op_Implicit(Chain.ChainComparator)~System.Byte">
+            <summary>
+            Implicit conversion between <see cref="T:Chain.ChainComparator"/> and <see cref="T:System.Byte"/>.
+            </summary>
+        </member>
+        <member name="M:Chain.ChainComparator.op_Implicit(System.SByte)~Chain.ChainComparator">
+            <summary>
+            Implicit conversion between <see cref="T:System.SByte"/> and <see cref="T:Chain.ChainComparator"/>.
+            </summary>
+        </member>
+        <member name="M:Chain.ChainComparator.op_Implicit(Chain.ChainComparator)~System.SByte">
+            <summary>
+            Implicit conversion between <see cref="T:Chain.ChainComparator"/> and <see cref="T:System.SByte"/>.
+            </summary>
+        </member>
+        <member name="M:Chain.ChainComparator.op_Implicit(System.Int16)~Chain.ChainComparator">
+            <summary>
+            Implicit conversion between <see cref="T:System.Int16"/> and <see cref="T:Chain.ChainComparator"/>.
+            </summary>
+        </member>
+        <member name="M:Chain.ChainComparator.op_Implicit(Chain.ChainComparator)~System.Int16">
+            <summary>
+            Implicit conversion between <see cref="T:Chain.ChainComparator"/> and <see cref="T:System.Int16"/>.
+            </summary>
+        </member>
+        <member name="M:Chain.ChainComparator.op_Implicit(System.UInt16)~Chain.ChainComparator">
+            <summary>
+            Implicit conversion between <see cref="T:System.UInt16"/> and <see cref="T:Chain.ChainComparator"/>.
+            </summary>
+        </member>
+        <member name="M:Chain.ChainComparator.op_Implicit(Chain.ChainComparator)~System.UInt16">
+            <summary>
+            Implicit conversion between <see cref="T:Chain.ChainComparator"/> and <see cref="T:System.UInt16"/>.
+            </summary>
+        </member>
+        <member name="M:Chain.ChainComparator.op_Implicit(System.Int32)~Chain.ChainComparator">
+            <summary>
+            Implicit conversion between <see cref="T:System.Int32"/> and <see cref="T:Chain.ChainComparator"/>.
+            </summary>
+        </member>
+        <member name="M:Chain.ChainComparator.op_Implicit(Chain.ChainComparator)~System.Int32">
+            <summary>
+            Implicit conversion between <see cref="T:Chain.ChainComparator"/> and <see cref="T:System.Int32"/>.
+            </summary>
+        </member>
+        <member name="M:Chain.ChainComparator.op_Implicit(System.UInt32)~Chain.ChainComparator">
+            <summary>
+            Implicit conversion between <see cref="T:System.UInt32"/> and <see cref="T:Chain.ChainComparator"/>.
+            </summary>
+        </member>
+        <member name="M:Chain.ChainComparator.op_Implicit(Chain.ChainComparator)~System.UInt32">
+            <summary>
+            Implicit conversion between <see cref="T:Chain.ChainComparator"/> and <see cref="T:System.UInt32"/>.
+            </summary>
+        </member>
+        <member name="M:Chain.ChainComparator.op_Implicit(System.Int64)~Chain.ChainComparator">
+            <summary>
+            Implicit conversion between <see cref="T:System.Int64"/> and <see cref="T:Chain.ChainComparator"/>.
+            </summary>
+        </member>
+        <member name="M:Chain.ChainComparator.op_Implicit(Chain.ChainComparator)~System.Int64">
+            <summary>
+            Implicit conversion between <see cref="T:Chain.ChainComparator"/> and <see cref="T:System.Int64"/>.
+            </summary>
+        </member>
+        <member name="M:Chain.ChainComparator.op_Implicit(System.UInt64)~Chain.ChainComparator">
+            <summary>
+            Implicit conversion between <see cref="T:System.UInt64"/> and <see cref="T:Chain.ChainComparator"/>.
+            </summary>
+        </member>
+        <member name="M:Chain.ChainComparator.op_Implicit(Chain.ChainComparator)~System.UInt64">
+            <summary>
+            Implicit conversion between <see cref="T:Chain.ChainComparator"/> and <see cref="T:System.UInt64"/>.
+            </summary>
+        </member>
+        <member name="M:Chain.ChainComparator.op_Implicit(System.Single)~Chain.ChainComparator">
+            <summary>
+            Implicit conversion between <see cref="T:System.Single"/> and <see cref="T:Chain.ChainComparator"/>.
+            </summary>
+        </member>
+        <member name="M:Chain.ChainComparator.op_Implicit(Chain.ChainComparator)~System.Single">
+            <summary>
+            Implicit conversion between <see cref="T:Chain.ChainComparator"/> and <see cref="T:System.Single"/>.
+            </summary>
+        </member>
+        <member name="M:Chain.ChainComparator.op_Implicit(System.Double)~Chain.ChainComparator">
+            <summary>
+            Implicit conversion between <see cref="T:System.Double"/> and <see cref="T:Chain.ChainComparator"/>.
+            </summary>
+        </member>
+        <member name="M:Chain.ChainComparator.op_Implicit(Chain.ChainComparator)~System.Double">
+            <summary>
+            Implicit conversion between <see cref="T:Chain.ChainComparator"/> and <see cref="T:System.Double"/>.
+            </summary>
+        </member>
+        <member name="M:Chain.ChainComparator.op_Implicit(System.Decimal)~Chain.ChainComparator">
+            <summary>
+            Implicit conversion between <see cref="T:System.Decimal"/> and <see cref="T:Chain.ChainComparator"/>.
+            </summary>
+        </member>
+        <member name="M:Chain.ChainComparator.op_Implicit(Chain.ChainComparator)~System.Decimal">
+            <summary>
+            Implicit conversion between <see cref="T:Chain.ChainComparator"/> and <see cref="T:System.Decimal"/>.
+            </summary>
+        </member>
+        <member name="M:Chain.ChainComparator.op_Implicit(System.Char)~Chain.ChainComparator">
+            <summary>
+            Implicit conversion between <see cref="T:System.Char"/> and <see cref="T:Chain.ChainComparator"/>.
+            </summary>
+        </member>
+        <member name="M:Chain.ChainComparator.op_Implicit(Chain.ChainComparator)~System.Char">
+            <summary>
+            Implicit conversion between <see cref="T:Chain.ChainComparator"/> and <see cref="T:System.Char"/>.
+            </summary>
+        </member>
+        <member name="M:Chain.ChainComparator.op_Implicit(System.String)~Chain.ChainComparator">
+            <summary>
+            Implicit conversion between <see cref="T:System.String"/> and <see cref="T:Chain.ChainComparator"/>.
+            </summary>
+        </member>
+        <member name="M:Chain.ChainComparator.op_Implicit(Chain.ChainComparator)~System.String">
+            <summary>
+            Implicit conversion between <see cref="T:Chain.ChainComparator"/> and <see cref="T:System.String"/>.
+            </summary>
+        </member>
+        <member name="M:Chain.ChainComparator.op_LessThan(Chain.ChainComparator,Chain.ChainComparator)">
+            <summary>
+            Less-than comparison between <see cref="T:Chain.ChainComparator"/> values.
+            </summary>
+            <param name="left">
+            A <see cref="T:Chain.ChainComparator"/> representing the left-hand side of the comparison.
+            </param>
+            <param name="right">
+            A <see cref="T:Chain.ChainComparator"/> representing the right-hand side of the comparison.
+            </param>
+            <returns>
+            true if <paramref name="left"/> has a value less than <paramref name="right"/>;
+            otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Chain.ChainComparator.op_LessThanOrEqual(Chain.ChainComparator,Chain.ChainComparator)">
+            <summary>
+            Less-than-or-equal comparison between <see cref="T:Chain.ChainComparator"/> values.
+            </summary>
+            <param name="left">
+            A <see cref="T:Chain.ChainComparator"/> representing the left-hand side of the comparison.
+            </param>
+            <param name="right">
+            A <see cref="T:Chain.ChainComparator"/> representing the right-hand side of the comparison.
+            </param>
+            <returns>
+            true if <paramref name="left"/> has a value less than or equal to <paramref
+            name="right"/>; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Chain.ChainComparator.op_GreaterThan(Chain.ChainComparator,Chain.ChainComparator)">
+            <summary>
+            Greater-than comparison between <see cref="T:Chain.ChainComparator"/> values.
+            </summary>
+            <param name="left">
+            A <see cref="T:Chain.ChainComparator"/> representing the left-hand side of the comparison.
+            </param>
+            <param name="right">
+            A <see cref="T:Chain.ChainComparator"/> representing the right-hand side of the comparison.
+            </param>
+            <returns>
+            true if <paramref name="left"/> has a value greater than <paramref name="right"/>;
+            otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Chain.ChainComparator.op_GreaterThanOrEqual(Chain.ChainComparator,Chain.ChainComparator)">
+            <summary>
+            Greater-than-or-equal comparison between <see cref="T:Chain.ChainComparator"/> values.
+            </summary>
+            <param name="left">
+            A <see cref="T:Chain.ChainComparator"/> representing the left-hand side of the comparison.
+            </param>
+            <param name="right">
+            A <see cref="T:Chain.ChainComparator"/> representing the right-hand side of the comparison.
+            </param>
+            <returns>
+            true if <paramref name="left"/> has a value greater than or equal to <paramref
+            name="right"/>; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Chain.ChainComparator.Equals(System.Object)">
+            <summary>
+            Returns a value indicating whether this instance is equal to a specified object.
+            </summary>
+            <param name="obj">A value to compare to this instance.</param>
+            <returns>
+            true if <paramref name="obj"/> is equal to the current <see cref="T:Chain.ChainComparator"/>
+            instance; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Chain.ChainComparator.op_Equality(Chain.ChainComparator,Chain.ChainComparator)">
+            <summary>
+            Equality comparison between <see cref="T:Chain.ChainComparator"/> values.
+            </summary>
+            <param name="left">
+            A <see cref="T:Chain.ChainComparator"/> representing the left-hand side of the comparison.
+            </param>
+            <param name="right">
+            A <see cref="T:Chain.ChainComparator"/> representing the right-hand side of the comparison.
+            </param>
+            <returns>
+            true if <paramref name="left"/> is equal to <paramref name="right"/>; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Chain.ChainComparator.op_Inequality(Chain.ChainComparator,Chain.ChainComparator)">
+            <summary>
+            Inequality comparison between <see cref="T:Chain.ChainComparator"/> values.
+            </summary>
+            <param name="left">
+            A <see cref="T:Chain.ChainComparator"/> representing the left-hand side of the comparison.
+            </param>
+            <param name="right">
+            A <see cref="T:Chain.ChainComparator"/> representing the right-hand side of the comparison.
+            </param>
+            <returns>
+            true if <paramref name="left"/> is unequal to <paramref name="right"/>; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Chain.ChainComparator.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>A hash code for the current <see cref="T:Chain.ChainComparator"/>.</returns>
+        </member>
+        <member name="M:Chain.ChainComparator.ToString">
+            <summary>
+            Returns a string that represents the current <see cref="T:Chain.ChainComparator"/> instance's
+            <see cref="P:Chain.ChainComparator.Value"/>.
+            </summary>
+            <returns>
+            A string that represents the current <see cref="T:Chain.ChainComparator"/> instance's <see cref="P:Chain.ChainComparator.Value"/>.
+            </returns>
+        </member>
+    </members>
+</doc>
