@@ -20,9 +20,7 @@ var result = (ChainComparator)boxedS < 2;
 ```
 
 ## How do I get this?
-NuGet package coming soon...
-
-For now just download, build, and include the .dll.
+Available as a [NuGet package](https://www.nuget.org/packages/csharp-chained-comparison)
 
 ## Credit
 Thanks to [Robbie Vanbrabant](https://github.com/robbiev) who was responsible for the original work from which this project was forked.
