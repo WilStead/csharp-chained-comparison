@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <RootNamespace>Chain</RootNamespace>
+    <Description>Chaining comparison operations with C#, like x &lt; y &lt; z</Description>
+    <PackageProjectUrl>https://github.com/WilStead/csharp-chained-comparison</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/WilStead/csharp-chained-comparison</RepositoryUrl>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>csharp-chained-comparison.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>bin\Debug\netstandard1.0\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NETSTANDARD1_0</DefineConstants>
+  </PropertyGroup>
+
+</Project>
